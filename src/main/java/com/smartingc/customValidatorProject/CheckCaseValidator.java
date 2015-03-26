@@ -12,7 +12,7 @@ public class CheckCaseValidator implements ConstraintValidator<CheckCase, String
 	    }
 
 	    public boolean isValid(String object, ConstraintValidatorContext constraintContext) {
-
+	    	constraintContext.disableDefaultConstraintViolation();
 	    	constraintContext.buildConstraintViolationWithTemplate("Case mode must be UPPERCASE.").addConstraintViolation();
 	        if (object == null)
 	            return true;
