@@ -15,11 +15,11 @@ import javax.validation.*;
 @Documented // Says, that the use of @CheckCase will be contained in the JavaDoc of elements annotated with it
 public @interface CheckCase {
 	
-	 String message() default "{com.smartingc.constraints.checkcase}"; //an attribute message that returns the default key for creating error messages in case the constraint is violated
+	 String message() default "default message"; //An attribute message that returns the default key for creating error messages in case the constraint is violated
 
-	    Class<?>[] groups() default {}; //an attribute groups that allows the specification of validation groups, to which this constraint belongs. This must default to an empty array of type Class<?>.
+	    Class<?>[] groups() default {}; //An attribute groups that allows the specification of validation groups, to which this constraint belongs. This must default to an empty array of type Class<?>.
 
-	    Class<? extends Payload>[] payload() default {}; // an attribute payload that can be used by clients of the Bean Validation API to asign custom payload objects to a constraint. This attribute is not used by the API itself.
+	    Class<? extends Payload>[] payload() default {}; // An attribute payload that can be used by clients of the Bean Validation API to assign custom payload objects to a constraint. This attribute is not used by the API itself.
 	    
 	    CaseMode value();
 
