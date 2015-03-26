@@ -33,10 +33,6 @@ public class CarTest {
         Set<ConstraintViolation<Car>> constraintViolations =
             validator.validate(car);
         assertEquals(2, constraintViolations.size());
-//        assertEquals(
-//            "Case mode must be UPPERCASE.", 
-//            constraintViolations.iterator().next().getMessage());
-    
         assertEquals(
               "Case mode must be UPPERCASE.", 
               constraintViolations.iterator().next().getMessage());
